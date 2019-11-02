@@ -1,0 +1,11 @@
+E:\web-2\second_task\toyshop\bin\Debug\netcoreapp3.0\toyshop.exe
+E:\web-2\second_task\toyshop\bin\Debug\netcoreapp3.0\toyshop.deps.json
+E:\web-2\second_task\toyshop\bin\Debug\netcoreapp3.0\toyshop.runtimeconfig.json
+E:\web-2\second_task\toyshop\bin\Debug\netcoreapp3.0\toyshop.runtimeconfig.dev.json
+E:\web-2\second_task\toyshop\bin\Debug\netcoreapp3.0\toyshop.dll
+E:\web-2\second_task\toyshop\bin\Debug\netcoreapp3.0\toyshop.pdb
+E:\web-2\second_task\toyshop\obj\Debug\netcoreapp3.0\toyshop.csprojAssemblyReference.cache
+E:\web-2\second_task\toyshop\obj\Debug\netcoreapp3.0\toyshop.AssemblyInfoInputs.cache
+E:\web-2\second_task\toyshop\obj\Debug\netcoreapp3.0\toyshop.AssemblyInfo.cs
+E:\web-2\second_task\toyshop\obj\Debug\netcoreapp3.0\toyshop.dll
+E:\web-2\second_task\toyshop\obj\Debug\netcoreapp3.0\toyshop.pdb
