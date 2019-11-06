@@ -26,9 +26,15 @@ namespace toyshop
             }
         }
 
-        public void ShowByBrand()
+        public Material GetMaterial(int id)
         {
-            
+            foreach (var i in _toyManager.Materials.Keys)
+            {
+                if (i.Id == id)
+                {
+                    return i;
+                }
+            }
         }
     }
 }

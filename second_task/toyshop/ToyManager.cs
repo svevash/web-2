@@ -7,32 +7,32 @@ namespace toyshop
     public class ToyManager
     {
         private readonly List<Toy> _list;
-        private Dictionary<ToyType, List<Toy>> _types;
-        private Dictionary<Material, List<Toy>> _materials;
-        private Dictionary<Color, List<Toy>> _colors;
-        private Dictionary<Brand, List<Toy>> _brands;
+        private Dictionary<ToyType, List<int>> _types;
+        private Dictionary<Material, List<int>> _materials;
+        private Dictionary<Color, List<int>> _colors;
+        private Dictionary<Brand, List<int>> _brands;
 
         public List<Toy> List => _list;
-
-        public Dictionary<ToyType, List<Toy>> Types
+        
+        public Dictionary<ToyType, List<int>> Types
         {
             get => _types;
             set => _types = value;
         }
 
-        public Dictionary<Material, List<Toy>> Materials
+        public Dictionary<Material, List<int>> Materials
         {
             get => _materials;
             set => _materials = value;
         }
 
-        public Dictionary<Color, List<Toy>> Colors
+        public Dictionary<Color, List<int>> Colors
         {
             get => _colors;
             set => _colors = value;
         }
 
-        public Dictionary<Brand, List<Toy>> Brands
+        public Dictionary<Brand, List<int>> Brands
         {
             get => _brands;
             set => _brands = value;
@@ -41,10 +41,10 @@ namespace toyshop
         public ToyManager()
         {
             _list = new List<Toy>();
-            _types = new Dictionary<ToyType, List<Toy>>();
-            _materials = new Dictionary<Material, List<Toy>>();
-            _colors = new Dictionary<Color, List<Toy>>();
-            _brands = new Dictionary<Brand, List<Toy>>();
+            _types = new Dictionary<ToyType, List<int>>();
+            _materials = new Dictionary<Material, List<int>>();
+            _colors = new Dictionary<Color, List<int>>();
+            _brands = new Dictionary<Brand, List<int>>();
         }
         
         public void AddToy(Toy toy)

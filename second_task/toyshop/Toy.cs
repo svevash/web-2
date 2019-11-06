@@ -7,10 +7,10 @@ namespace toyshop
     {
         private int _id;
         private string _name;
-        private ToyType _type;
-        private List<Material> _material;
-        private Color _color;
-        private Brand _brand;
+        private int _idType;
+        private List<int> _idMaterial;
+        private int _idColor;
+        private int _idBrand;
         private int _price;
 
         public int Id
@@ -25,28 +25,28 @@ namespace toyshop
             set => _name = value;
         }
 
-        public ToyType Type
+        public int IdType
         {
-            get => _type;
-            set => _type = value;
+            get => _idType;
+            set => _idType = value;
         }
 
-        public List<Material> Material
+        public List<int> IdMaterial
         {
-            get => _material;
-            set => _material = value;
+            get => _idMaterial;
+            set => _idMaterial = value;
         }
 
-        public Color Color
+        public int IdColor
         {
-            get => _color;
-            set => _color = value;
+            get => _idColor;
+            set => _idColor = value;
         }
 
-        public Brand Brand
+        public int IdBrand
         {
-            get => _brand;
-            set => _brand = value;
+            get => _idBrand;
+            set => _idBrand = value;
         }
 
         public int Price
@@ -54,19 +54,21 @@ namespace toyshop
             get => _price;
             set => _price = value;
         }
-
-
-        public Toy(int id, string name, ToyType type, List<Material> material, Color color, Brand brand, int price)
+        
+        public Toy(int id, string name, int type, List<int> material, int color, int brand, int price)
         {
             if (id < 0) throw new ArgumentOutOfRangeException(nameof(id));
+            if (type < 0) throw new ArgumentOutOfRangeException(nameof(type));
+            if (color < 0) throw new ArgumentOutOfRangeException(nameof(color));
+            if (brand < 0) throw new ArgumentOutOfRangeException(nameof(brand));
             if (price < 0) throw new ArgumentOutOfRangeException(nameof(price));
-
+            
             _id = id;
             _name = name ?? throw new ArgumentNullException(nameof(name));
-            _type = type ?? throw new ArgumentNullException(nameof(type));
-            _material = material ?? throw new ArgumentNullException(nameof(material));
-            _color = color ?? throw new ArgumentNullException(nameof(color));
-            _brand = brand ?? throw new ArgumentNullException(nameof(brand));
+            _idType = type;
+            _idMaterial = material ?? throw new ArgumentNullException(nameof(material));
+            _idColor = color;
+            _idBrand = brand;
             _price = price;
         }
     }
