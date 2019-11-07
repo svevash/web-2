@@ -6,7 +6,7 @@ namespace toyshop
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }

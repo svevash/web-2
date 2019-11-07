@@ -6,8 +6,11 @@
     <e p="E:\web-2\second_task\toyshop" t="IncludeRecursive">
       <e p="bin" t="ExcludeRecursive" />
       <e p="Brand.cs" t="Include" />
+      <e p="BrandContainer.cs" t="Include" />
       <e p="Color.cs" t="Include" />
+      <e p="ColorContainer.cs" t="Include" />
       <e p="Material.cs" t="Include" />
+      <e p="MaterialContainer.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp3.0" t="Include">
@@ -19,10 +22,12 @@
       <e p="Program.cs" t="Include" />
       <e p="ShowManager.cs" t="Include" />
       <e p="Toy.cs" t="Include" />
+      <e p="ToyContainer.cs" t="Include" />
       <e p="ToyManager.cs" t="Include" />
       <e p="toyshop.csproj" t="IncludeRecursive" />
       <e p="toyshop.sln" t="IncludeFlat" />
       <e p="ToyType.cs" t="Include" />
+      <e p="TypeContainer.cs" t="Include" />
     </e>
   </component>
 </project>
