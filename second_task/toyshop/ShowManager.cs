@@ -74,39 +74,77 @@ namespace toyshop
         {
             return _type.Types.Keys.FirstOrDefault(t => t.Id == id);
         }
+
+        public void ShowAll()
+        {
+            Console.WriteLine("id, name | type | brand | color | materials | price\n");
+            foreach (var i in _container.List)
+            {
+                Console.Write(i.Id + ", " + i.Name + " | " + FindType(i.IdType).Id + ", " + FindType(i.IdType).Name + 
+                              " | " + FindBrand(i.IdBrand).Id + ", " + FindBrand(i.IdBrand).Name + " | " 
+                              + FindColor(i.IdColor).Id + ", " + FindColor(i.IdColor).Name + " | ");
+                foreach (var m in i.IdMaterial)
+                {
+                    Console.Write(FindMaterial(m).Id + ", " + FindMaterial(m).Name + "; ");
+                }
+                Console.Write("| " + i.Price + "\n");
+            }
+        }
+
+        public void ShowByBrand()
+        {
+            Console.WriteLine("brand id, brand name | toy id,.. \n");
+            foreach (var (key, value) in _brand.Brands)
+            {
+                Console.Write(key.Id.ToString(), ", ", key.Name, " | ");
+                foreach (var t in value)
+                {
+                    Console.Write(t.ToString(), " ");
+                }
+                Console.WriteLine();
+            }
+        }
         
+        public void ShowByColor()
+        {
+            Console.WriteLine("color id, color name | toy id,.. \n");
+            foreach (var (key, value) in _color.Colors)
+            {
+                Console.Write(key.Id.ToString(), ", ", key.Name, " | ");
+                foreach (var t in value)
+                {
+                    Console.Write(t.ToString(), " ");
+                }
+                Console.WriteLine();
+            }
+        }
         
-//        private readonly ToyManager _toyManager;
-//        
-//        public ShowManager(ToyManager toyManager)
-//        {
-//            _toyManager = toyManager ?? throw new ArgumentNullException(nameof(toyManager));
-//        }
-//
-//        public void ShowAll()
-//        {
-//            Console.WriteLine("id, name | type | brand | color | materials | price\n");
-//            foreach (var i in _toyManager.List)
-//            {
-//                Console.Write(i.Id + ", " + i.Name + " | " + i.Type.Id + ", " + i.Type.Name + " | " + 
-//                              i.Brand.Id + ", " + i.Brand.Name + " | " + i.Color.Id + ", " + i.Color.Name + " | ");
-//                foreach (var m in i.Material)
-//                {
-//                    Console.Write(m.Id + ", " + m.Name + "; ");
-//                }
-//                Console.Write("| " + i.Price + "\n");
-//            }
-//        }
-//
-//        public Material GetMaterial(int id)
-//        {
-//            foreach (var i in _toyManager.Materials.Keys)
-//            {
-//                if (i.Id == id)
-//                {
-//                    return i;
-//                }
-//            }
-//        }
+        public void ShowByMaterial()
+        {
+            Console.WriteLine("material id, material name | toy id,.. \n");
+            foreach (var (key, value) in _material.Materials)
+            {
+                Console.Write(key.Id.ToString(), ", ", key.Name, " | ");
+                foreach (var t in value)
+                {
+                    Console.Write(t.ToString(), " ");
+                }
+                Console.WriteLine();
+            }
+        }
+        
+        public void ShowByType()
+        {
+            Console.WriteLine("type id, type name | toy id,.. \n");
+            foreach (var (key, value) in _type.Types)
+            {
+                Console.Write(key.Id.ToString(), ", ", key.Name, " | ");
+                foreach (var t in value)
+                {
+                    Console.Write(t.ToString(), " ");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
