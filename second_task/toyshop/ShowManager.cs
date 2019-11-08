@@ -77,7 +77,7 @@ namespace toyshop
 
         public void ShowAll()
         {
-            Console.WriteLine("id, name | type | brand | color | materials | price\n");
+            Console.WriteLine("id, name | type | brand | color | materials | price");
             foreach (var i in _container.List)
             {
                 Console.Write(i.Id + ", " + i.Name + " | " + FindType(i.IdType).Id + ", " + FindType(i.IdType).Name + 
@@ -89,62 +89,67 @@ namespace toyshop
                 }
                 Console.Write("| " + i.Price + "\n");
             }
+            Console.WriteLine();
         }
 
         public void ShowByBrand()
         {
-            Console.WriteLine("brand id, brand name | toy id,.. \n");
+            Console.WriteLine("brand id, brand name | toy id,..");
             foreach (var (key, value) in _brand.Brands)
             {
-                Console.Write(key.Id.ToString(), ", ", key.Name, " | ");
+                Console.Write(key.Id + ", " + key.Name + " | ");
                 foreach (var t in value)
                 {
-                    Console.Write(t.ToString(), " ");
+                    Console.Write(t + " ");
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine();
         }
         
         public void ShowByColor()
         {
-            Console.WriteLine("color id, color name | toy id,.. \n");
+            Console.WriteLine("color id, color name | toy id,..");
             foreach (var (key, value) in _color.Colors)
             {
-                Console.Write(key.Id.ToString(), ", ", key.Name, " | ");
+                Console.Write(key.Id + ", " + key.Name + " | ");
                 foreach (var t in value)
                 {
-                    Console.Write(t.ToString(), " ");
+                    Console.Write(t + " ");
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine();
         }
         
         public void ShowByMaterial()
         {
-            Console.WriteLine("material id, material name | toy id,.. \n");
+            Console.WriteLine("material id, material name | toy id,..");
             foreach (var (key, value) in _material.Materials)
             {
-                Console.Write(key.Id.ToString(), ", ", key.Name, " | ");
+                Console.Write(key.Id + ", " + key.Name + " | ");
                 foreach (var t in value)
                 {
-                    Console.Write(t.ToString(), " ");
+                    Console.Write(t + " ");
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine();
         }
         
         public void ShowByType()
         {
-            Console.WriteLine("type id, type name | toy id,.. \n");
+            Console.WriteLine("type id, type name | toy id,..");
             foreach (var (key, value) in _type.Types)
             {
-                Console.Write(key.Id.ToString(), ", ", key.Name, " | ");
+                Console.Write(key.Id + ", " + key.Name + " | ");
                 foreach (var t in value)
                 {
-                    Console.Write(t.ToString(), " ");
+                    Console.Write(t + " ");
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine();
         }
     }
 }
