@@ -26,8 +26,8 @@ namespace toyshop
             if (material == null) throw new ArgumentNullException(nameof(material));
             if (brand == null) throw new ArgumentNullException(nameof(brand));
             if (color == null) throw new ArgumentNullException(nameof(color));
-            if (id <= 0) throw new ArgumentOutOfRangeException(nameof(id));
-            if (price <= 0) throw new ArgumentOutOfRangeException(nameof(price));
+            if (id < 0) throw new ArgumentOutOfRangeException(nameof(id));
+            if (price < 0) throw new ArgumentOutOfRangeException(nameof(price));
             if (_showManager.Container.List.Any(t => t.Id == id))
                 throw new Exception("toy id already exists");
             if (material.Length == 0)
@@ -69,7 +69,7 @@ namespace toyshop
             if (colorid == -1)
             {
                 colorid = _showManager.ColorContainer.Colors.Count;
-                _showManager.ColorContainer.Colors.Add(new Color(colorid, type), new List<int>());
+                _showManager.ColorContainer.Colors.Add(new Color(colorid, color), new List<int>());
             }
 
             List<int> materialid = new List<int>();
@@ -104,6 +104,11 @@ namespace toyshop
             _showManager.ColorContainer.Colors[_showManager.FindColor(toy.IdColor)].Add(toy.Id);
             
             _showManager.TypeContainer.Types[_showManager.FindType(toy.IdType)].Add(toy.Id);
+        }
+
+        public void DeleteToy(int id)
+        {
+            
         }
     }
 }

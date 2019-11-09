@@ -77,7 +77,7 @@ namespace toyshop
 
         public void ShowAll()
         {
-            Console.WriteLine("id, name | type | brand | color | materials | price");
+            Console.WriteLine("\nid, name | type | brand | color | materials | price");
             foreach (var i in _container.List)
             {
                 Console.Write(i.Id + ", " + i.Name + " | " + FindType(i.IdType).Id + ", " + FindType(i.IdType).Name + 
