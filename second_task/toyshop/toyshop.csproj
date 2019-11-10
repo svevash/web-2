@@ -8,6 +8,13 @@
     <ItemGroup>
       <Compile Remove="Finder.cs" />
       <Compile Remove="ttt.cs" />
+      <Compile Remove="BrandContainer.cs" />
+      <Compile Remove="ColorContainer.cs" />
+      <Compile Remove="MaterialContainer.cs" />
+      <Compile Remove="ShowManager.cs" />
+      <Compile Remove="ToyContainer.cs" />
+      <Compile Remove="TypeContainer.cs" />
+      <Compile Remove="ToyType.cs" />
     </ItemGroup>
 
 </Project>

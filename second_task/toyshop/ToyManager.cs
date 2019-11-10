@@ -1,114 +1,57 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace toyshop
 {
     public class ToyManager
     {
-        private ShowManager _showManager;
+        private static HashSet<Toy> _toys;
 
-        public ShowManager ShowManage
+        public HashSet<Toy> Toys
         {
-            get => _showManager;
-            set => _showManager = value;
+            get => _toys;
+            set => _toys = value;
         }
 
         public ToyManager()
         {
-            _showManager = new ShowManager();
+            _toys = new HashSet<Toy>();
         }
 
-        public void AddToy(int id, string name, string type, string[] material, string brand, string color, int price)
+        public void Add(string name, string material, string color, string brand)
         {
-            if (name == null) throw new ArgumentNullException(nameof(name));
-            if (type == null) throw new ArgumentNullException(nameof(type));
-            if (material == null) throw new ArgumentNullException(nameof(material));
-            if (brand == null) throw new ArgumentNullException(nameof(brand));
-            if (color == null) throw new ArgumentNullException(nameof(color));
-            if (id < 0) throw new ArgumentOutOfRangeException(nameof(id));
-            if (price < 0) throw new ArgumentOutOfRangeException(nameof(price));
-            if (_showManager.Container.List.Any(t => t.Id == id))
-                throw new Exception("toy id already exists");
-            if (material.Length == 0)
-                throw new ArgumentException("Value cannot be an empty collection.", nameof(material));
-
-            int typeid = -1;
-            foreach (var t in _showManager.TypeContainer.Types.Where(t => t.Key.Name == type))
+            if (_toys.Any(t => t.Name == name))
             {
-                typeid = t.Key.Id;
-                break;
+                return;
             }
 
-            if (typeid == -1)
-            {
-                typeid = _showManager.TypeContainer.Types.Count;
-                _showManager.TypeContainer.Types.Add(new ToyType(typeid, type), new List<int>());
-            }
-
-            int brandid = -1;
-            foreach (var t in _showManager.BrandContainer.Brands.Where(t => t.Key.Name == brand))
-            {
-                brandid = t.Key.Id;
-                break;
-            }
-
-            if (brandid == -1)
-            {
-                brandid = _showManager.BrandContainer.Brands.Count;
-                _showManager.BrandContainer.Brands.Add(new Brand(brandid, brand), new List<int>());
-            }
-
-            int colorid = -1;
-            foreach (var t in _showManager.ColorContainer.Colors.Where(t => t.Key.Name == color))
-            {
-                colorid = t.Key.Id;
-                break;
-            }
-
-            if (colorid == -1)
-            {
-                colorid = _showManager.ColorContainer.Colors.Count;
-                _showManager.ColorContainer.Colors.Add(new Color(colorid, color), new List<int>());
-            }
-
-            List<int> materialid = new List<int>();
-            for (int i = 0; i < material.Length; i++)
-            {
-                materialid.Add(-1);
-                foreach (var t in _showManager.MaterialContainer.Materials.Where(t => t.Key.Name == material[i]))
-                {
-                    materialid[i] = t.Key.Id;
-                    break;
-                }
-
-                if (materialid[i] == -1)
-                {
-                    materialid[i] = _showManager.MaterialContainer.Materials.Count;
-                    _showManager.MaterialContainer.Materials.Add(new Material(materialid[i], material[i]),
-                        new List<int>());
-                }
-            }
-
-            Toy toy = new Toy(id, name, typeid, materialid, colorid, brandid, price);
-
-            _showManager.Container.List.Add(toy);
-
-            foreach (var t in toy.IdMaterial)
-            {
-                _showManager.MaterialContainer.Materials[_showManager.FindMaterial(t)].Add(toy.Id);
-            }
-
-            _showManager.BrandContainer.Brands[_showManager.FindBrand(toy.IdBrand)].Add(toy.Id);
-            
-            _showManager.ColorContainer.Colors[_showManager.FindColor(toy.IdColor)].Add(toy.Id);
-            
-            _showManager.TypeContainer.Types[_showManager.FindType(toy.IdType)].Add(toy.Id);
+            _toys.Add(new Toy(_toys.Count, name, MaterialManager.GetByName(material).Id, 
+                ColorManager.GetByName(color).Id, BrandManager.GetByName(brand).Id));
         }
 
-        public void DeleteToy(int id)
+        public Toy GetByName(string name)
         {
-            
+            return _toys.FirstOrDefault(t => t.Name == name);
+        }
+
+        public static Toy GetById(int id)
+        {
+            return _toys.FirstOrDefault(t => t.Id == id);
+        }
+
+        public Brand GetBrand(int id)
+        {
+            return _toys.Where(t => t.Id == id).Select(t => BrandManager.GetById(t.IdBrand)).FirstOrDefault();
+        }
+
+        public Color GetColor(int id)
+        {
+            return _toys.Where(t => t.Id == id).Select(t => ColorManager.GetById(t.IdColor)).FirstOrDefault();
+        }
+
+        public Material GetMaterial(int id)
+        {
+            return _toys.Where(t => t.Id == id).Select(t => MaterialManager.GetById(t.IdMaterial)).FirstOrDefault();
         }
     }
 }
