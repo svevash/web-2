@@ -5,7 +5,7 @@ namespace toyshop
 {
     public class ToyManager
     {
-        private static HashSet<Toy> _toys;
+        private HashSet<Toy> _toys;
 
         public HashSet<Toy> Toys
         {
@@ -18,40 +18,54 @@ namespace toyshop
             _toys = new HashSet<Toy>();
         }
 
-        public void Add(string name, string material, string color, string brand)
+        public void Add(string name, int materialId, int colorId, int brandId)
         {
             if (_toys.Any(t => t.Name == name))
             {
                 return;
             }
 
-            _toys.Add(new Toy(_toys.Count, name, MaterialManager.GetByName(material).Id, 
-                ColorManager.GetByName(color).Id, BrandManager.GetByName(brand).Id));
+            _toys.Add(new Toy(name, materialId, colorId, brandId));
         }
 
         public Toy GetByName(string name)
         {
+            if (_toys.All(t => t.Name != name))
+            {
+                throw new System.ArgumentOutOfRangeException("Toy with name" + name + "Doex not exist");
+            }
+
             return _toys.FirstOrDefault(t => t.Name == name);
         }
 
-        public static Toy GetById(int id)
+        public HashSet<int> GetBrands()
         {
-            return _toys.FirstOrDefault(t => t.Id == id);
+            return _toys.Select(t => t.IdBrand).ToHashSet();
         }
 
-        public Brand GetBrand(int id)
+        public HashSet<string> GetByBrandId(int brandId)
         {
-            return _toys.Where(t => t.Id == id).Select(t => BrandManager.GetById(t.IdBrand)).FirstOrDefault();
+            return _toys.Where(t => t.IdBrand == brandId).Select(t => t.Name).ToHashSet();
         }
 
-        public Color GetColor(int id)
+        public HashSet<int> GetColors()
         {
-            return _toys.Where(t => t.Id == id).Select(t => ColorManager.GetById(t.IdColor)).FirstOrDefault();
+            return _toys.Select(t => t.IdColor).ToHashSet();
         }
 
-        public Material GetMaterial(int id)
+        public HashSet<string> GetByColorId(int colorId)
         {
-            return _toys.Where(t => t.Id == id).Select(t => MaterialManager.GetById(t.IdMaterial)).FirstOrDefault();
+            return _toys.Where(t => t.IdColor == colorId).Select(t => t.Name).ToHashSet();
+        }
+
+        public HashSet<int> GetMaterials()
+        {
+            return _toys.Select(t => t.IdMaterial).ToHashSet();
+        }
+
+        public HashSet<string> GetByMaterialId(int materialId)
+        {
+            return _toys.Where(t => t.IdMaterial == materialId).Select(t => t.Name).ToHashSet();
         }
     }
 }

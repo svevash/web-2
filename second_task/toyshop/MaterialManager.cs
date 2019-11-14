@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace toyshop
 {
     public class MaterialManager
     {
-        private static HashSet<Material> _materials;
+        private HashSet<Material> _materials;
 
         public HashSet<Material> Materials
         {
@@ -18,24 +19,24 @@ namespace toyshop
             _materials = new HashSet<Material>();
         }
 
-        public void Add(string name)
+        public int Add(string name)
         {
+            int id;
             if (_materials.Any(t => t.Name == name))
             {
-                return;
+                id = _materials.FirstOrDefault(t => t.Name == name).Id;
+                Console.WriteLine(name + " already exists. Id is " + id);
+                return id;
             }
 
-            _materials.Add(new Material(_materials.Count, name));
+            id = _materials.Count;
+            _materials.Add(new Material(id, name));
+            Console.WriteLine(name + " added. Id is " + id);
+            return id;
         }
 
-        public static Material GetByName(string name)
-        {
-            return _materials.FirstOrDefault(t => t.Name == name);
-        }
+        public Material GetByName(string name) => _materials.FirstOrDefault(t => t.Name == name);
 
-        public static Material GetById(int id)
-        {
-            return _materials.FirstOrDefault(t => t.Id == id);
-        }
+        public Material GetById(int id) => _materials.FirstOrDefault(t => t.Id == id);
     }
 }

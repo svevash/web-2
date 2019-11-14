@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace toyshop
 {
     public class ColorManager
     {
-        private static HashSet<Color> _colors;
+        private HashSet<Color> _colors;
 
         public HashSet<Color> Colors
         {
@@ -18,24 +19,24 @@ namespace toyshop
             _colors = new HashSet<Color>();
         }
 
-        public void Add(string name)
+        public int Add(string name)
         {
+            int id;
             if (_colors.Any(t => t.Name == name))
             {
-                return;
+                id = _colors.FirstOrDefault(t => t.Name == name).Id;
+                Console.WriteLine(name + " already exists. Id is " + id);
+                return id;
             }
 
-            _colors.Add(new Color(_colors.Count, name));
+            id = _colors.Count;
+            _colors.Add(new Color(id, name));
+            Console.WriteLine(name + " added. Id is " + id);
+            return id;
         }
 
-        public static Color GetByName(string name)
-        {
-            return _colors.FirstOrDefault(t => t.Name == name);
-        }
+        public Color GetByName(string name) => _colors.FirstOrDefault(t => t.Name == name);
 
-        public static Color GetById(int id)
-        {
-            return _colors.FirstOrDefault(t => t.Id == id);
-        }
+        public Color GetById(int id) => _colors.FirstOrDefault(t => t.Id == id);
     }
 }

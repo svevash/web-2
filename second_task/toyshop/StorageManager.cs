@@ -6,10 +6,10 @@ namespace toyshop
 {
     public class StorageManager
     {
-        // < toyid, quantity > 
-        private static Dictionary<int, int> _storage;
+        // < toyname, quantity > 
+        private Dictionary<string, int> _storage;
 
-        public Dictionary<int, int> Storage
+        public Dictionary<string, int> Storage
         {
             get => _storage;
             set => _storage = value;
@@ -17,54 +17,60 @@ namespace toyshop
 
         public StorageManager()
         {
-            _storage = new Dictionary<int, int>();
+            _storage = new Dictionary<string, int>();
         }
 
-        public bool Add(int id, int quantity)
+        public bool Add(string name, int quantity)
         {
-            if (_storage.ContainsKey(id))
+            if (_storage.ContainsKey(name))
             {
-                _storage[id] += quantity;
+                _storage[name] += quantity;
                 return true;
             }
 
-            if (ToyManager.GetById(id) == null) return false;
-            _storage.Add(id, quantity);
+            _storage.Add(name, quantity);
+            Console.WriteLine(name + " added to storage. Current quantity is " + _storage[name]);
             return true;
-
-            //Console.WriteLine("such toy doesn't exist!");
         }
 
-        public bool Remove(int id, int quantity)
+        public bool Remove(string name, int quantity)
         {
-            if (!_storage.ContainsKey(id)) return false;
+            if (!_storage.ContainsKey(name)) return false;
             
-            if (_storage[id] < quantity)
+            if (_storage[name] < quantity)
             {
-                //Console.WriteLine("you are trying to remove more toys than the storage contains!");
                 return false;
             }
 
-            if (_storage[id] == quantity)
+            if (_storage[name] == quantity)
             {
-                _storage.Remove(id);
+                _storage.Remove(name);
+                Console.WriteLine(name + " removed from storage. Current quantity is " + _storage[name]);
                 return true;
             }
 
-            _storage[id] -= quantity;
+            _storage[name] -= quantity;
+            Console.WriteLine(name + " removed from storage. Current quantity is " + _storage[name]);            
             return true;
-
-            //Console.WriteLine("such toy doesn't exist!");
         }
 
-        public List<int> GetToysId()
+        public HashSet<string> GetToysNames()
         {
-            return _storage.Select(t => t.Key).ToList();
+            return _storage.Keys.ToHashSet();
         }
 
-        public static bool ContainsToy(int id)
+        public bool ContainsToy(string name)
         {
-            return _storage.ContainsKey(id);
+            return _storage.ContainsKey(name);
+        }
+        public int GetQuantity(string name)
+        {
+            if (!_storage.ContainsKey(name))
+            {
+                return -1;
+            }
+
+            return _storage[name];
         }
     }
 }

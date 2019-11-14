@@ -5,17 +5,10 @@ namespace toyshop
 {
     public class Toy
     {
-        private int _id;
         private string _name;
         private int _idMaterial;
         private int _idColor;
         private int _idBrand;
-
-        public int Id
-        {
-            get => _id;
-            set => _id = value;
-        }
 
         public string Name
         {
@@ -41,15 +34,14 @@ namespace toyshop
             set => _idBrand = value;
         }
         
-        public Toy(int id, string name, int material, int color, int brand)
+        public Toy(string name, int material, int color, int brand)
         {
-            if (id < 0) throw new ArgumentOutOfRangeException(nameof(id));
+            if (name.Length == 0) throw new ArgumentOutOfRangeException(nameof(name));
             if (color < 0) throw new ArgumentOutOfRangeException(nameof(color));
             if (brand < 0) throw new ArgumentOutOfRangeException(nameof(brand));
             if (material < 0) throw new ArgumentOutOfRangeException(nameof(material));
 
-            _id = id;
-            _name = name ?? throw new ArgumentNullException(nameof(name));
+            _name = name;
             _idMaterial = material;
             _idColor = color;
             _idBrand = brand;
