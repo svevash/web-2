@@ -38,5 +38,15 @@ namespace toyshop
         public Material GetByName(string name) => _materials.FirstOrDefault(t => t.Name == name);
 
         public Material GetById(int id) => _materials.FirstOrDefault(t => t.Id == id);
+        
+        public void ShowMaterials(HashSet<int> idmaterials)
+        {
+            Console.WriteLine("\nMaterials:");
+            foreach (var t in idmaterials)
+            {
+                Console.WriteLine("id: " + t + " name: " + GetById(t).Name);
+            }
+            Console.WriteLine();
+        }
     }
 }

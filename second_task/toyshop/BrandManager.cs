@@ -44,5 +44,15 @@ namespace toyshop
         {
             return _brands.FirstOrDefault(t => t.Id == id);
         }
+
+        public void ShowBrands(HashSet<int> idbrands)
+        {
+            Console.WriteLine("\nBrands:");
+            foreach (var t in idbrands)
+            {
+                Console.WriteLine("id: " + t + " name: " + GetById(t).Name);
+            }
+            Console.WriteLine();
+        }
     }
 }

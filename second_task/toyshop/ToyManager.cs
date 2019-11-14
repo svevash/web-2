@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace toyshop
@@ -22,9 +23,10 @@ namespace toyshop
         {
             if (_toys.Any(t => t.Name == name))
             {
+                Console.WriteLine("Toy with such name already exists!");
                 return;
             }
-
+            Console.WriteLine("Success!");
             _toys.Add(new Toy(name, materialId, colorId, brandId));
         }
 
@@ -32,7 +34,7 @@ namespace toyshop
         {
             if (_toys.All(t => t.Name != name))
             {
-                throw new System.ArgumentOutOfRangeException("Toy with name" + name + "Doex not exist");
+                throw new System.ArgumentOutOfRangeException("Toy with name" + name + "Does not exist");
             }
 
             return _toys.FirstOrDefault(t => t.Name == name);
@@ -66,6 +68,47 @@ namespace toyshop
         public HashSet<string> GetByMaterialId(int materialId)
         {
             return _toys.Where(t => t.IdMaterial == materialId).Select(t => t.Name).ToHashSet();
+        }
+        
+        public void ShowToys(HashSet<string> toys)
+        {
+            Console.WriteLine("\nToys:");
+            foreach (var t in toys)
+            {
+                Console.WriteLine("name: " + t + " id brand: " + GetByName(t).IdBrand + " id color: " + GetByName(t).IdColor
+                                  + " id material: " + GetByName(t).IdMaterial);
+            }
+            Console.WriteLine();
+        }
+
+        public void ShowByBrand(int id, HashSet<string> toys)
+        {
+            Console.WriteLine("\nToys:");
+            foreach (var t in toys.Where(t => GetByName(t).IdBrand == id))
+            {
+                Console.WriteLine(t);
+            }
+            Console.WriteLine();
+        }
+        
+        public void ShowByColor(int id, HashSet<string> toys)
+        {
+            Console.WriteLine("\nToys:");
+            foreach (var t in toys.Where(t => GetByName(t).IdColor == id))
+            {
+                Console.WriteLine(t);
+            }
+            Console.WriteLine();
+        }
+        
+        public void ShowByMaterial(int id, HashSet<string> toys)
+        {
+            Console.WriteLine("\nToys:");
+            foreach (var t in toys.Where(t => GetByName(t).IdMaterial == id))
+            {
+                Console.WriteLine(t);
+            }
+            Console.WriteLine();
         }
     }
 }

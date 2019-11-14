@@ -38,5 +38,15 @@ namespace toyshop
         public Color GetByName(string name) => _colors.FirstOrDefault(t => t.Name == name);
 
         public Color GetById(int id) => _colors.FirstOrDefault(t => t.Id == id);
+        
+        public void ShowColors(HashSet<int> idcolors)
+        {
+            Console.WriteLine("\nColors:");
+            foreach (var t in idcolors)
+            {
+                Console.WriteLine("id: " + t + " name: " + GetById(t).Name);
+            }
+            Console.WriteLine();
+        }
     }
 }

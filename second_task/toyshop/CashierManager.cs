@@ -33,8 +33,21 @@ namespace toyshop
                 return true;
             }
 
-            if (_storageManager.ContainsToy(name)) return false;
+            if (!_storageManager.ContainsToy(name)) return false;
             _prices.Add(name, price);
+            return true;
+        }
+
+        public bool OfferSale(string name, int sale)
+        {
+            if (!_prices.ContainsKey(name)) return false;
+
+            if (sale <= 0 || sale > 100)
+            {
+                Console.WriteLine("The sale is too big!");
+                return false;
+            }
+            _prices[name] -= _prices[name] % sale;
             return true;
         }
 
@@ -52,7 +65,7 @@ namespace toyshop
         {
             if (GetQuantity(name) < quantity)
             {
-                Console.WriteLine("Not enouh " + name +"(s) in storage");
+                Console.WriteLine("Not enough " + name + "(s) in storage");
                 return money;
             }
 
@@ -64,7 +77,7 @@ namespace toyshop
 
             int cost = quantity * GetPrice(name);
 
-            if (cost < money)
+            if (cost > money)
             {
                 Console.WriteLine("Not enough money to buy " + quantity + " " + name + "(s)");
                 return money;
@@ -76,17 +89,52 @@ namespace toyshop
 
         public HashSet<int> GetBrands()
         {
-            return (from t in _prices.Keys where _storageManager.ContainsToy(t) select _toyManager.GetByName(t).IdBrand).ToHashSet();
+            var result = new HashSet<int>();
+            foreach (var (key, value) in _prices)
+            {
+                if (!_storageManager.ContainsToy(key)) continue;
+                var toy = _toyManager.GetByName(key);
+                result.Add(toy.IdBrand);
+            }
+
+            return result;
         }
 
         public HashSet<int> GetColors()
         {
-            return (from t in _prices.Keys where _storageManager.ContainsToy(t) select _toyManager.GetByName(t).IdColor).ToHashSet();
+            var result = new HashSet<int>();
+            foreach (var (key, value) in _prices)
+            {
+                if (!_storageManager.ContainsToy(key)) continue;
+                var toy = _toyManager.GetByName(key);
+                result.Add(toy.IdColor);
+            }
+
+            return result;        
         }
 
         public HashSet<int> GetMaterials()
         {
-            return (from t in _prices.Keys where _storageManager.ContainsToy(t) select _toyManager.GetByName(t).IdMaterial).ToHashSet();
-        }      
+            var result = new HashSet<int>();
+            foreach (var (key, value) in _prices)
+            {
+                if (!_storageManager.ContainsToy(key)) continue;
+                var toy = _toyManager.GetByName(key);
+                result.Add(toy.IdMaterial);
+            }
+
+            return result;        
+        }
+
+        public HashSet<string> GetToys()
+        {
+            var result = new HashSet<string>();
+            foreach (var t in _prices.Where(t => _storageManager.ContainsToy(t.Key)))
+            {
+                result.Add(t.Key);
+            }
+
+            return result;
+        }
     }
 }
