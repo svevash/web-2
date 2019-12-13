@@ -103,10 +103,10 @@ namespace toyshop
         public HashSet<int> GetColors()
         {
             var result = new HashSet<int>();
-            foreach (var (key, value) in _prices)
+            foreach (var t in _prices)
             {
-                if (!_storageManager.ContainsToy(key)) continue;
-                var toy = _toyManager.GetByName(key);
+                if (!_storageManager.ContainsToy(t.Key)) continue;
+                var toy = _toyManager.GetByName(t.Key);
                 result.Add(toy.IdColor);
             }
 

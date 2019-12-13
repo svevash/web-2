@@ -26,7 +26,7 @@ namespace WebApplication3
  
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Page Not Found");
+                await context.Response.WriteAsync("go to /first or /second");
             });
         }
  
@@ -34,14 +34,28 @@ namespace WebApplication3
         {
             app.Run(async context =>
             {
-                await context.Response.WriteAsync("First");
+                var a = 8;
+                var b = 5;
+
+                var c = 1;
+                for (var i = 0; i < b; i++)
+                {
+                    c *= a - i;
+                }
+                
+                await context.Response.WriteAsync($"a! / (a - b)! = {c}");
             });
         }
         private static void Second(IApplicationBuilder app)
         {
             app.Run(async context =>
             {
-                await context.Response.WriteAsync("Second");
+                var a = 5;
+                var b = 8;
+
+                var res = Math.Sin(a) * Math.Cos(b) + Math.Cos(a) * Math.Sin(b);
+                
+                await context.Response.WriteAsync( $"sin(a) * cos(b) + cos(a) * sin(b) = {res}");
             });
         }
     }
