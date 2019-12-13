@@ -20,13 +20,14 @@ namespace WebApplication5
         public async Task InvokeAsync(HttpContext context)
         {
             await _next.Invoke(context);
-            if (context.Response.StatusCode == 403)
+            switch (context.Response.StatusCode)
             {
-                await context.Response.WriteAsync("Access Denied");
-            }
-            else if (context.Response.StatusCode == 404)
-            {
-                await context.Response.WriteAsync("Not Found");
+                case 403:
+                    await context.Response.WriteAsync("Access Denied");
+                    break;
+                case 404:
+                    await context.Response.WriteAsync("Not Found");
+                    break;
             }
         }
     }

@@ -20,18 +20,36 @@ namespace WebApplication5
  
         public async Task InvokeAsync(HttpContext context)
         {
-            string path = context.Request.Path.Value.ToLower();
-            if (path == "/index")
+            var path = context.Request.Path.Value.ToLower();
+            switch (path)
             {
-                await context.Response.WriteAsync("Home Page");
-            }
-            else if (path == "/about")
-            {
-                await context.Response.WriteAsync("About");
-            }
-            else
-            {
-                context.Response.StatusCode = 404;
+                case "/first":
+                {
+                    var a = 8;
+                    var b = 5;
+                    var c = 1;
+            
+                    for (var i = 0; i < b; i++)
+                    {
+                        c *= a - i;
+                    }
+
+                    await context.Response.WriteAsync($"a! / (a - b)! = {c}");
+                    break;
+                }
+                case "/second":
+                {
+                    var a = 5;
+                    var b = 8;
+
+                    var res = Math.Sin(a) * Math.Cos(b) + Math.Cos(a) * Math.Sin(b);
+                
+                    await context.Response.WriteAsync( $"sin(a) * cos(b) + cos(a) * sin(b) = {res}");
+                    break;
+                }
+                default:
+                    context.Response.StatusCode = 404;
+                    break;
             }
         }
     }
