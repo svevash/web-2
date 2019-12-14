@@ -67,3 +67,4 @@ E:\web-2\fourth_task\ToyShop\ToyShop\obj\Debug\netcoreapp3.0\ToyShop.Views.pdb
 E:\web-2\fourth_task\ToyShop\ToyShop\obj\Debug\netcoreapp3.0\ToyShop.csproj.CopyComplete
 E:\web-2\fourth_task\ToyShop\ToyShop\obj\Debug\netcoreapp3.0\ToyShop.dll
 E:\web-2\fourth_task\ToyShop\ToyShop\obj\Debug\netcoreapp3.0\ToyShop.pdb
+E:\web-2\fourth_task\ToyShop\ToyShop\obj\Debug\netcoreapp3.0\Razor\Views\Home\Create.cshtml.g.cs

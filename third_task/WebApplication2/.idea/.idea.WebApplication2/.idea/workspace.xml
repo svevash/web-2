@@ -1,8 +1,18 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff15aa20-cd7f-4691-87be-0d406c66f60e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../second_task/toyshop/CashierManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../second_task/toyshop/CashierManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.0/WebApplication2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.0/WebApplication2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.0/WebApplication2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.0/WebApplication2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.0/WebApplication2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.0/WebApplication2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.0/WebApplication2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.0/WebApplication2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApplication6/.idea/.idea.WebApplication6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication6/.idea/.idea.WebApplication6/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApplication7/bin/Debug/netcoreapp3.0/WebApplication7.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/bin/Debug/netcoreapp3.0/WebApplication7.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApplication7/bin/Debug/netcoreapp3.0/WebApplication7.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/bin/Debug/netcoreapp3.0/WebApplication7.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApplication7/obj/Debug/netcoreapp3.0/WebApplication7.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/obj/Debug/netcoreapp3.0/WebApplication7.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApplication7/obj/Debug/netcoreapp3.0/WebApplication7.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/obj/Debug/netcoreapp3.0/WebApplication7.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,20 +96,23 @@
       <option name="presentableId" value="Default" />
       <updated>1576070453061</updated>
       <workItem from="1576070454639" duration="2392000" />
+      <workItem from="1576281572594" duration="150000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

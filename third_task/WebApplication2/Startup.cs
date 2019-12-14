@@ -29,6 +29,7 @@ namespace WebApplication2
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync($"a! / (a - b)! = {c}");
+                c = 1;
             });
         }
     }

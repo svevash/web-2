@@ -41,17 +41,6 @@ namespace WebApplication7
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync(messageService.Send(context));
-                
-                if (!context.Request.Cookies.ContainsKey("text"))
-                { 
-                    context.Response.Cookies.Append("text", "hello");
-                }
-                    
-                if (!context.Session.Keys.Contains("text"))
-                {
-                    context.Session.SetString("text", "goodbye");
-                }
-
             });
         }
     }

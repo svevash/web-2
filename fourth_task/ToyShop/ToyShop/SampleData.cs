@@ -31,24 +31,24 @@ namespace ToyShop
                 );
                 context.SaveChanges();
             }
-            if (!context.Types.Any())
-            {
-                context.Types.AddRange(
-                    new Type()
-                    {
-                        Name = "Soft toy",
-                    },
-                    new Type()
-                    {
-                        Name = "Doll",
-                    },
-                    new Type()
-                    {
-                        Name = "Car",
-                    }
-                );
-                context.SaveChanges();
-            }
+//            if (!context.Types.Any())
+//            {
+//                context.Types.AddRange(
+//                    new Type()
+//                    {
+//                        Name = "Soft toy",
+//                    },
+//                    new Type()
+//                    {
+//                        Name = "Doll",
+//                    },
+//                    new Type()
+//                    {
+//                        Name = "Car",
+//                    }
+//                );
+//                context.SaveChanges();
+//            }
         }
     }
 }
