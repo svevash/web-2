@@ -2,40 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcaa44e4-5dd5-4aa6-a094-0aacde59146a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/.idea/.idea.ToyShop/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/.idea/.idea.ToyShop/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/SampleData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/SampleData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/bin/Debug/netcoreapp3.0/ToyShop.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/bin/Debug/netcoreapp3.0/ToyShop.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/bin/Debug/netcoreapp3.0/ToyShop.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/bin/Debug/netcoreapp3.0/ToyShop.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/bin/Debug/netcoreapp3.0/ToyShop.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/bin/Debug/netcoreapp3.0/ToyShop.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/bin/Debug/netcoreapp3.0/ToyShop.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/bin/Debug/netcoreapp3.0/ToyShop.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/bin/Debug/netcoreapp3.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/bin/Debug/netcoreapp3.0/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/Razor/Views/Home/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/Razor/Views/Home/Index.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/Razor/Views/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/Razor/Views/Shared/_Layout.cshtml.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.RazorCoreGenerate.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebApplication2/.idea/.idea.WebApplication2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication2/.idea/.idea.WebApplication2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication2/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication2/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication2/bin/Debug/netcoreapp3.0/WebApplication2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication2/bin/Debug/netcoreapp3.0/WebApplication2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication2/bin/Debug/netcoreapp3.0/WebApplication2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication2/bin/Debug/netcoreapp3.0/WebApplication2.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication2/obj/Debug/netcoreapp3.0/WebApplication2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication2/obj/Debug/netcoreapp3.0/WebApplication2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication2/obj/Debug/netcoreapp3.0/WebApplication2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication2/obj/Debug/netcoreapp3.0/WebApplication2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApplication3/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication3/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication6/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication7/Services/EmailMessageSender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/Services/EmailMessageSender.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication7/Services/SmsMessageSender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/Services/SmsMessageSender.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication7/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication7/bin/Debug/netcoreapp3.0/WebApplication7.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/bin/Debug/netcoreapp3.0/WebApplication7.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication7/bin/Debug/netcoreapp3.0/WebApplication7.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/bin/Debug/netcoreapp3.0/WebApplication7.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication7/obj/Debug/netcoreapp3.0/WebApplication7.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/obj/Debug/netcoreapp3.0/WebApplication7.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication7/obj/Debug/netcoreapp3.0/WebApplication7.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/obj/Debug/netcoreapp3.0/WebApplication7.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +21,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
@@ -122,7 +97,7 @@
       <workItem from="1576216259980" duration="1315000" />
       <workItem from="1576250221757" duration="81000" />
       <workItem from="1576281512246" duration="19000" />
-      <workItem from="1576290584503" duration="345000" />
+      <workItem from="1576290584503" duration="1492000" />
     </task>
     <servers />
   </component>

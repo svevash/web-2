@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff15aa20-cd7f-4691-87be-0d406c66f60e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/bin/Debug/netcoreapp3.0/ToyShop.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/bin/Debug/netcoreapp3.0/ToyShop.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/bin/Debug/netcoreapp3.0/ToyShop.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/bin/Debug/netcoreapp3.0/ToyShop.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../fourth_task/ToyShop/ToyShop/obj/Debug/netcoreapp3.0/ToyShop.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.0/WebApplication2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.0/WebApplication2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.0/WebApplication2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.0/WebApplication2.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.0/WebApplication2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.0/WebApplication2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.0/WebApplication2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.0/WebApplication2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApplication3/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication3/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WebApplication6/.idea/.idea.WebApplication6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication6/.idea/.idea.WebApplication6/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication7/bin/Debug/netcoreapp3.0/WebApplication7.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/bin/Debug/netcoreapp3.0/WebApplication7.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication7/bin/Debug/netcoreapp3.0/WebApplication7.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/bin/Debug/netcoreapp3.0/WebApplication7.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication7/obj/Debug/netcoreapp3.0/WebApplication7.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/obj/Debug/netcoreapp3.0/WebApplication7.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WebApplication7/obj/Debug/netcoreapp3.0/WebApplication7.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApplication7/obj/Debug/netcoreapp3.0/WebApplication7.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,6 +94,7 @@
       <updated>1576070453061</updated>
       <workItem from="1576070454639" duration="2392000" />
       <workItem from="1576281572594" duration="150000" />
+      <workItem from="1576293984379" duration="533000" />
     </task>
     <servers />
   </component>

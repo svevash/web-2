@@ -1,0 +1,23 @@
+﻿@model IEnumerable<ToyShop.Models.Toy>
+@{
+}
+<h3>Список игрушек</h3>
+
+<div>
+    <table width="100%" class="table-condensed">
+        <tr>
+            <td>Название</td>
+            <td></td>
+        </tr>
+        
+        @foreach (var toy in Model) {
+            <tr>
+                <td>@toy.Name</td>
+                <td><a href="~/Toy/Edit/@toy.Id">Редактировать</a></td>
+                <td><a href="~/Toy/Delete/@toy.Id">Удалить</a></td>
+                <td><a href="~/Toy/Detail/@toy.Id">Детали</a></td>
+            </tr>
+        }
+    </table>
+<p><a href="~/Toy/Create">Добавить</a></p>
+</div>

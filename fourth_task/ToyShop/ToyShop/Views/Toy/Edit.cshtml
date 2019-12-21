@@ -1,0 +1,32 @@
+﻿@model ToyShop.Models.Toy
+
+@{
+    ViewBag.Title = "Редактировать";
+}
+
+<div>
+    <h4>Редактировать</h4>
+    
+    <form method="post">
+        <table width="100%" class="table-condensed">
+            <tr>
+                <td>Название:</td>
+                <td><input type="text" value=@ViewBag.Name name="Name" /> </td>
+            </tr>
+            <tr>
+                <td>Тип:</td>
+                <td><input type="text" value=@ViewBag.Type name="Type" /></td>
+            </tr>
+            <tr>
+                <td>Цена:</td>
+                <td><input type="text" value=@ViewBag.Price name="Price" /></td>
+            </tr>
+            <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+        </table>
+
+    </form>
+    <p><a href="~/Toy/Index">Вернуться к каталогу игрушек</a></p>
+</div>
+<p>
+
+

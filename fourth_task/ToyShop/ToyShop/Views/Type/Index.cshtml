@@ -1,16 +1,22 @@
 ﻿@model IEnumerable<ToyShop.Models.ToyType>
 @{
-    ViewBag.Title = "Все типы";
+    ViewData["Title"] = "Список типов игрушек";
 }
-<a asp-action="Create">Добавить тип</a>
-<table class="table">
+
+<h3>Список типов игрушек</h3>
+
+<table width="80%" class="table-condensed">
     <tr>
-        <td>Имя</td>
+        <td>Название</td>
+        <td></td>
     </tr>
-    @foreach (var item in Model)
-    {
+    
+    @foreach (var type in Model) {
         <tr>
-            <td>@item.Name</td>
+            <td>@type.Name</td>
+            <td><a href="~/Type/Edit/@type.Id">Редактировать </a></td>
+            <td><a href="~/Type/Delete/@type.Id">Удалить </a></td>
         </tr>
     }
 </table>
+<p><a href="~/Type/Create">Добавить</a></p>

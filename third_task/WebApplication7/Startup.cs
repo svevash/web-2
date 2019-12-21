@@ -20,7 +20,7 @@ namespace WebApplication7
             services.AddDistributedMemoryCache();
             services.AddSession();
             Random rnd = new Random();
-            var i  = rnd.Next(0, 2);
+            var i  = 1;
             services.AddTransient<IMessageSender>(provider=> {
                 if (i != 0) return new EmailMessageSender();
                 else return new SmsMessageSender();

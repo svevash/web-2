@@ -2,7 +2,7 @@
 
 namespace ToyShop.Views.Type
 {
-    public class Index : PageModel
+    public class Type : PageModel
     {
         public void OnGet()
         {

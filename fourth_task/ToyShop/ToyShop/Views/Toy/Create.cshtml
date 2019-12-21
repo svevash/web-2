@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ToyShop.Models.Toy>
+@{
+    ViewData["Title"] = "Добавить игрушку";
+}
+
+<!DOCTYPE html>
+
+<div>
+    <h3>Добавить игрушку</h3>
+    <form method="post">
+        <table width="100%" class="table-condensed">
+            <tr>
+                <td>Название:</td>
+                <td><input type="text" name="Name" /> </td>
+            </tr>
+            <tr>
+                <td>Тип:</td>
+                <td><input type="text" name="Type"/></td>
+            </tr>
+            <tr>
+                <td>Цена:</td>
+                <td><input type="number" name="Price" /></td>
+            </tr>
+            <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+        </table>
+    </form>
+</div>
+<p><a href="~/Toy/Index">Вернуться к каталогу игрушек</a></p>
+

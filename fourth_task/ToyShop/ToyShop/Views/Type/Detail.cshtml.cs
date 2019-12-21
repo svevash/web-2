@@ -2,7 +2,7 @@
 
 namespace ToyShop.Views.Type
 {
-    public class Add : PageModel
+    public class Detail : PageModel
     {
         public void OnGet()
         {

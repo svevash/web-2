@@ -1,0 +1,22 @@
+﻿@model ToyShop.Models.ToyType
+
+@{
+    ViewBag.Title = "Детали";
+}
+
+<h2>Детали</h2>
+
+<div>
+    <table width="100%" class="table-condensed">
+        <tr>
+            <td>Id</td>
+            <td>Название</td>
+        </tr>
+        <tr>
+            <td>@ViewBag.Id</td>
+            <td>@ViewBag.Name</td>
+        </tr>
+    </table>
+</div>
+<p>
+<p><a href="~/Type/Type/">Вернуться к списку типов</a></p>

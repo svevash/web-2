@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ToyShop.Views.Type
+namespace ToyShop.Views.Toy
 {
-    public class Add : PageModel
+    public class Edit : PageModel
     {
         public void OnGet()
         {
