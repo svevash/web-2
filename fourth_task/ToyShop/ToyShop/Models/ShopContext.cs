@@ -9,7 +9,7 @@ namespace ToyShop.Models
     public class ShopContext : DbContext
     {
         public DbSet<Toy> Toys { get; set; }
-        public DbSet<Type> Types { get; set; }
+        public DbSet<ToyType> Types { get; set; }
 
         public ShopContext(DbContextOptions<ShopContext> options)
             : base(options)

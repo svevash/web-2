@@ -15,6 +15,12 @@
             <td>@item.Name</td>
             <td>@item.Type</td>
             <td>@item.Price</td>
+            <td>
+                <form method="post">
+                    <a asp-page="/Edit" asp-route-id="@item.Id">Изменить</a>
+                        <button type="submit" form asp-action="delete" asp-controller="home" asp-route-id="@item.Id">Удалить</button>
+                    </form>
+                </td>
         </tr>
     }
 </table>
