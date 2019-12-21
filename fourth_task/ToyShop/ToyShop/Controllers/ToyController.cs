@@ -25,8 +25,7 @@ namespace ToyShop.Controllers
         {
             if (text == null || text.Trim() == "") return View(db.Toys.ToList());
             var toys = db.Toys.Where(c => c.Name.Contains(text) || 
-                                          c.Type.Contains(text) || 
-                                          c.Id.ToString().Contains(text) || 
+                                          c.Type.Contains(text) ||
                                           c.Price.ToString().Contains(text));
             return View(toys);
         }

@@ -60,6 +60,7 @@
           <e p="Type" t="Include">
             <e p="Create.cshtml" t="Include" />
             <e p="Create.cshtml.cs" t="Include" />
+            <e p="Detail.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Edit.cshtml.cs" t="Include" />
             <e p="Index.cshtml" t="Include" />
