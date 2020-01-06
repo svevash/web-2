@@ -12,6 +12,7 @@
       </e>
       <e p="Models" t="Include">
         <e p="ErrorViewModel.cs" t="Include" />
+        <e p="ShopContext.cs" t="Include" />
         <e p="Toy.cs" t="Include" />
         <e p="ToyType.cs" t="Include" />
       </e>
