@@ -12,6 +12,7 @@ namespace ToyShop.Models
         public TimeSpan LifeTime => DateTime.Now - CreationDate;
         public int TypeId { get; set; }
         public ToyType Type { get; set; }
-        private DateTime CreationDate { get; set; }
+        public DateTime CreationDate { get; set; }
+        public int Price { get; set; }
     }
 }

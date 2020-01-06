@@ -1,8 +1,19 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<ToyShop.Models.Toy>
+@{
+    ViewBag.Title = "Все игрушки";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<a asp-action="Create">Добавить игрушку</a>
+<table class="table">
+    <tr><td>Имя</td><td>Тип</td><td>Цена</td><td>Дата создания</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Type.Name</td>
+            <td>@item.Price</td>
+            <td>"@String.Format("{0} days, {1} hours, {2} minutes, {3} seconds", 
+                     @item.LifeTime.Days, @item.LifeTime.Hours, @item.LifeTime.Minutes, @item.LifeTime.Seconds);"
+            </td>
+        </tr>
+    }
+</table>
