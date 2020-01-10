@@ -8,8 +8,8 @@
 
 @using (Html.BeginForm("Add", "Home", FormMethod.Post))
 {
-    @Html.LabelFor(model => model.Name, "Name")<br/>
-    @Html.EditorFor(model => model.Name)<br/>
+    <label asp-for="Name">Name</label><br/>
+    <input type="text" asp-for="Name"/><br/>
     @Html.LabelFor(model => model.Type.Name, "Type")<br/>
     @Html.EditorFor(model => model.Type.Name)<br/>
     @Html.LabelFor(model => model.Price, "Price")<br/>
