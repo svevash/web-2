@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\web-2\\fourth_task\\ToyShop\\ToyShop\\ToyShop.csproj": {}
+    "E:\\web-2\\sixth_task\\third\\third.csproj": {}
   },
   "projects": {
-    "E:\\web-2\\fourth_task\\ToyShop\\ToyShop\\ToyShop.csproj": {
+    "E:\\web-2\\sixth_task\\third\\third.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\web-2\\fourth_task\\ToyShop\\ToyShop\\ToyShop.csproj",
-        "projectName": "ToyShop",
-        "projectPath": "E:\\web-2\\fourth_task\\ToyShop\\ToyShop\\ToyShop.csproj",
+        "projectUniqueName": "E:\\web-2\\sixth_task\\third\\third.csproj",
+        "projectName": "third",
+        "projectPath": "E:\\web-2\\sixth_task\\third\\third.csproj",
         "packagesPath": "C:\\Users\\Svetlana\\.nuget\\packages\\",
-        "outputPath": "E:\\web-2\\fourth_task\\ToyShop\\ToyShop\\obj\\",
+        "outputPath": "E:\\web-2\\sixth_task\\third\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Svetlana\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,16 @@
         "netcoreapp3.0": {
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.0, )"
             }

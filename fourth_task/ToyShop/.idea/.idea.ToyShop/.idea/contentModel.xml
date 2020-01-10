@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Svetlana\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Svetlana\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_ToyShop.-1974128694.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Svetlana\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Svetlana\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ToyShop.-1974128694.00" t="ExcludeRecursive" />
     <e p="E:\web-2\fourth_task\ToyShop" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="ToyShop" t="IncludeRecursive">
@@ -24,6 +24,7 @@
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
               <e p="ToyShop.AssemblyInfo.cs" t="Include" />
+              <e p="ToyShop.RazorAssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
