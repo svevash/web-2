@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Toy catalog";
+}
+
+<h2>Lazy loading</h2>
+
+<table width="100%" class="table table-striped table-bordered table-hover">
+    <tr>
+        <th>Toy</th>
+        <th>Type</th>
+        <th>Price</th>
+    </tr>
+    
+    @foreach (var toy in Model)
+    {
+        <tr>
+            <td>@toy.Name</td>
+            <td>@toy.Type.Name</td>
+            <td>@toy.Price</td>
+        </tr>
+    }
+</table>
