@@ -14,7 +14,7 @@
         "outputPath": "E:\\web-2\\sixth_task\\fourth\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Svetlana\\AppData\\Roaming\\NuGet\\NuGet.Config",

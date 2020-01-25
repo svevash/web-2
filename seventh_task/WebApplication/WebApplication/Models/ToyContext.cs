@@ -7,7 +7,8 @@ namespace WebApplication.Models
         public DbSet<Toy> Toys { get; set; }
         public ToyContext(DbContextOptions options)
             : base(options)
-        { 
+        {
+            //Database.EnsureDeleted();
             Database.EnsureCreated();
         }
     }

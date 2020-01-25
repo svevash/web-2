@@ -7028,7 +7028,7 @@
   },
   "packageFolders": {
     "C:\\Users\\Svetlana\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet": {}
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -7040,7 +7040,7 @@
       "outputPath": "E:\\web-2\\sixth_task\\fourth\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\Svetlana\\AppData\\Roaming\\NuGet\\NuGet.Config",

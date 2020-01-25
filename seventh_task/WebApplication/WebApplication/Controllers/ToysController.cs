@@ -17,8 +17,18 @@ namespace WebApplication.Controllers
             db = context;
             if (!db.Toys.Any())
             {
-                db.Toys.Add(new Toy { Name = "Tom", Material = "cotton", Price = 5});
-                db.Toys.Add(new Toy { Name = "Alice", Material = "silk", Price = 6});
+                var toy1 = new Toy { Name = "Grumpy Cat", Material = "cotton", Price = 599 };
+                var toy2 = new Toy { Name = "Tom The Cat", Material = "cotton", Price = 499 };
+                var toy3 = new Toy { Name = "Jerry The Mouse", Material = "synthetics", Price = 599 };
+                var toy4 = new Toy { Name = "Mickey Mouse", Material = "plastic", Price = 1099 };
+                var toy5 = new Toy { Name = "Minnie Mouse", Material = "plastic", Price = 399 };
+                var toy6 = new Toy { Name = "Barbie", Material = "plastic", Price = 299 };
+                var toy7 = new Toy { Name = "Ken", Material = "plastic", Price = 1199 };
+                var toy8 = new Toy { Name = "Blue Sad Dog", Material = "cotton", Price = 899 };
+                var toy9 = new Toy { Name = "Star Wars", Material = "plastic", Price = 199 };
+                var toy10 = new Toy { Name = "Ninjago", Material = "plastic", Price = 299 };
+
+                db.Toys.AddRange(toy1, toy2, toy3, toy4, toy5, toy6, toy7, toy8, toy9, toy10);
                 db.SaveChanges();
             }
         }
