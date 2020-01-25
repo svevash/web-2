@@ -28,6 +28,11 @@ namespace WebApplication.Controllers
                 var toy9 = new Toy { Name = "Star Wars", Material = "plastic", Price = 199 };
                 var toy10 = new Toy { Name = "Ninjago", Material = "plastic", Price = 299 };
 
+                var mat1 = new Material { Name = "cotton" };
+                var mat2 = new Material { Name = "synthetic" };
+                var mat3 = new Material {Name = "plastic"};
+                
+                db.Materials.AddRange(mat1, mat2, mat3);
                 db.Toys.AddRange(toy1, toy2, toy3, toy4, toy5, toy6, toy7, toy8, toy9, toy10);
                 db.SaveChanges();
             }
